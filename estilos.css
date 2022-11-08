@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0B2348;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    /* padding: 1%; */
+}
+
+.navbar {
+    width: 20%;
+    /* background-color: lightcoral; */
+}
+
+.navbar ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar ul li {
+    height: 100%;
+    list-style: none;
+    padding: 4%;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 150%;
+}
+
+.navbar ul li a:hover {
+    color: #2468c7;
+    transition: all 0.5s ease-in-out ;
+    z-index: 1;
+}
+
+.navbar ul li::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    background-color: #112c53;
+    clip-path: circle(0% at 50% 50%);
+    width: 100%;
+    z-index: -1;
+    transition: all 1s ease-in-out 0s;
+}
+
+.navbar ul li:hover::before{
+    position: absolute;
+    clip-path: circle(60% at 50% 50%);
+    transition: all 0.5s ease-in-out ;
+}
+
+.navbar ul li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 5px;
+    top: 80%;
+    border-radius: 10px;
+    background-color: #2468c7;
+    clip-path: circle(0% at 50% 50%);
+    transition: all 1s ease-in-out 0s;
+}
+
+.navbar ul li a:hover::after {
+    clip-path: circle(20px at 50% 50%);
+    transition: all 0.5s ease-in-out ;
+} 
+
+/* .navbar ul li::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    background-color: rgb(62, 146, 214);
+    clip-path: circle(0% at 50% 50%);
+    width: 100%;
+    z-index: -1;
+    transition: all 1s ease-in-out 0s;
+}
+
+.navbar ul li:hover::before{
+    position: absolute;
+    clip-path: circle(60% at 50% 50%);
+    transition: all 0.5s ease-in-out ;
+}
+
+.navbar ul li a:hover {
+    color: white;
+    transition: all 0.5s ease-in-out ;
+    z-index: 1;
+}
+
+*/
