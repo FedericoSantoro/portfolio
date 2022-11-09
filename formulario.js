@@ -15,7 +15,7 @@ let comprobarNombre = () => {
 }
 
 let comprobarMail = () => {
-    if ( !(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(mail.value)) ) {
+    if ( !(/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+$/.test(mail.value)) ) {
         console.log("Error con el mail");
         mail.className = "mail errorDato";
         return false;
@@ -42,5 +42,8 @@ boton.addEventListener("click", () => {
     if ( !( comprobarNombre() === true && comprobarMail() === true && comprobarConsulta() === true ) ) {
         console.log("Error con dato");
         event.preventDefault();
+    }
+    else {
+        alert("Consulta enviada");
     }
 })

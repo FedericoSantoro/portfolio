@@ -1,4 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap);
+
 * {
+    font-family: "Source Sans Pro", Arial;
     margin: 0;
     padding: 0;
 }
@@ -7,7 +10,7 @@ body {
     background: #0B2348;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 /* **************HEADER****************** */
@@ -97,7 +100,6 @@ header {
 /* **************MAIN****************** */
 
 main {
-    margin: 5% 0%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -111,13 +113,13 @@ main .info {
     justify-content: space-around;
     width: 80%;
     color: white;
-    height: 450px;
+    height: 650px;
 }
 
 main .info img {
-    height: 100%;
+    height: 90%;
     width: auto;
-    border: 5px solid aqua;
+    border: 5px solid #2468c7;
 }
 
 main .info .descripcion {
@@ -138,7 +140,7 @@ main .info .descripcion h2::after {
     content: "";
     display: block;
     position: absolute;
-    background: aqua;
+    background: #2468c7;
     width: 80%;
     height: 5px;
     left: 10%;
@@ -208,7 +210,7 @@ main .proyectos h2::after {
     content: "";
     display: block;
     position: absolute;
-    background-color: aqua;
+    background-color: #2468c7;
     height: 5px;
     width: 80%;
     left: 10%;
@@ -308,7 +310,7 @@ main .contactame {
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    height: 500px;
+    height: 600px;
 }
 
 main .contactame .imagen-contactame {
@@ -332,6 +334,7 @@ main .contactame .formulario {
     flex-flow: column nowrap;
     /* justify-content: space-between; */
     align-items: center;
+    font-family: "Source Sans Pro", Arial;
 }
 
 main .contactame .formulario h2 {
@@ -346,7 +349,7 @@ main .contactame .formulario h2::after {
     content: "";
     display: block;
     position: absolute;
-    background-color: aqua;
+    background-color: #2468c7;
     height: 5px;
     width: 80%;
     left: 10%;
@@ -370,7 +373,8 @@ main .contactame .formulario form input {
     border: none;
     border-bottom: 2px solid white;
     color: white;
-    width: 100%;
+    width: 98%;
+    padding: 0% 1%;
 }
 
 main .contactame .formulario form input:focus {
@@ -388,6 +392,7 @@ main .contactame .formulario form .consulta {
     color: white;
     width: 96%;
     padding: 2%;
+    font-family: "Source Sans Pro", Arial;
 }
 
 main .contactame .formulario form .consulta:focus {
@@ -440,7 +445,7 @@ footer h2::after {
     content: "";
     display: block;
     position: absolute;
-    background-color: aqua;
+    background-color: #2468c7;
     height: 5px;
     width: 80%;
     left: 10%;
@@ -463,7 +468,7 @@ footer img {
 
 /* **************MEDIA QUERIES**************** */
 
-@media screen and (min-width: 2560px) {
+/* @media screen and (max-width: 2560px) {
     body {
         font-size: 30px;
     }
@@ -482,8 +487,6 @@ footer img {
     }
 
     main .proyectos .container .card .links-informacion button {
-        /* height: 50px; */
-        /* width: 50; */
         font-size: 30px;
     }
 
@@ -516,14 +519,24 @@ footer img {
         height: 80px;
         width: auto;
     }
-
+    
     main .contactame .formulario .titulo, main .proyectos .titulo, main .info .descripcion .titulo {
         font-size: 80px;
     }
-
+    
 }
 
-@media screen and (min-width: 1024px) {
+*/
+@media screen and (max-width: 1024px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header .navbar {
+        width: 50%;
+    }
+
     main .info {
         height: 800px;
         width: 90%;
@@ -533,5 +546,196 @@ footer img {
         height: 50%;
         width: auto;
     }
+
+    main .contactame .imagen-contactame img {
+        left: -60%;
+    }
+
+    main .proyectos {
+        width: 90%;
+    }
+
+    main .contactame {
+        width: 90%;
+    }
+
+    footer .redes {
+        width: 90%;
+    }
     
+}
+@media screen and (max-width: 768px) {
+
+    header {
+        width: 96%;
+        margin: 2%;
+    }
+
+    header .navbar {
+        width: 50%;
+    }
+
+    main .info {
+        width: 96%;
+        margin: 2%;
+        height: 800px;
+        width: 90%;
+    }
+
+    main .info img {
+        height: 50%;
+        width: auto;
+    }
+
+    main .contactame .formulario .titulo, main .proyectos .titulo, main .info .descripcion .titulo {
+        font-size: 30px;
+    }
+
+    main .info .descripcion p {
+        font-size: 20px;
+    }
+
+    main .proyectos .container .card .links-informacion p {
+        font-size: 20px;
+    }
+
+    main .proyectos {
+        width: 96%;
+        margin: 2%;
+    }
+
+    main .contactame {
+        width: 96%;
+        margin: 2%;
+    }
+
+    main .contactame .imagen-contactame img {
+        left: -75%;
+    }
+
+    footer .redes {
+        width: 96%;
+        margin: 2%;
+    }
+
+} 
+
+@media screen and (max-width: 425px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        /* width: 100%; */
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header h1 {
+        margin: 2%;
+    }
+
+    header .navbar {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    main .info {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        height: auto;
+    }
+
+    main .info img {
+        width: 90%;
+        margin: 5%;
+    }
+
+    main .info .descripcion {
+        width: 90%;
+    }
+
+    main .info .descripcion h2 {
+        font-size: 30px;
+        margin: 2%;
+    }
+
+    main .info .descripcion p {
+        margin: 2%;
+        font-size: 20px;
+    }
+
+    main .info .descripcion a .descarga-cv {
+        font-size: 20px;
+        margin: 2%;
+    }
+
+    main .fondo {
+        width: 100%;
+        height: auto;
+    }
+
+    main .proyectos {
+        width: 100%;
+    }
+
+    main .proyectos h2 {
+        font-size: 30px;
+        margin-left: 5%;
+    }
+
+    main .proyectos .container {
+        flex-flow: column nowrap;
+        width: 90%;
+        margin: 0% 5%;
+        height: auto;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    main .proyectos .container .card {
+        width: 100%;
+        margin: 3% 0%;
+    }
+
+    main .contactame {
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        height: auto;
+    }
+
+    main .contactame .imagen-contactame {
+        width: 0;
+        margin: 0;
+        height: 0;
+    }
+
+    main .contactame .formulario {
+        width: 100%;
+    }
+
+    main .contactame .formulario h2 {
+        font-size: 25px;
+    }
+
+    main .contactame .formulario form input {
+        margin: 2%;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    footer h2 {
+        text-align: center;
+        font-size: 25px;
+    }
+
 }
