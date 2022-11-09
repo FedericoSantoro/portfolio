@@ -13,20 +13,124 @@
         <h1>Federico Santoro</h1>
         <div class="navbar">
             <ul>
-                <li><a href="">Sobre mi</a></li>
-                <li><a href="">Proyectos</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="#info">Sobre mi</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contactame">Contacto</a></li>
             </ul>
         </div>
     </header>
 
     <main>
-
+        <div class="info" id="info">
+            <img src="imagenes/FotoFede.jpeg" alt="foto">
+            <div class="descripcion">
+                <h2 class="titulo">Sobre mi</h2>
+                <p>
+                    Soy una persona responsable y determinada, que siempre busca 
+                    cumplir con los objetivos de la mejor manera posible. Disfruto 
+                    de ayudar a los demás. Actualmente estoy en búsqueda de mi primer 
+                    empleo en el área de IT. Me gustaría poder desarrollar tanto mis 
+                    habilidades técnicas como interpersonales. 
+                </p>
+                <p>
+                    Tengo titulo de Tecnico Electronico y actualmente estoy estudiando
+                    Ingenieria en Sistemas de Informacion en la Universidad Tecnologica
+                    Nacional - Facultad Regional de Buenos Aires y voy por el segundo 
+                    año de la carrera.
+                </p>
+                <p>
+                    Tengo conocimientos de HTML, CSS, Javascript, C++, C, Git-Github, Vercel, Arduino, Programacion de
+                    Microcontroladores, Trello, Canva y Microsoft Office.
+                </p>
+                <a target="_blank" href="https://drive.google.com/file/d/1NFU-v5MMmGTWNv1HIERnKxL6lKIi_OLq/view?usp=sharing"><button class="descarga-cv">Descargar CV</button></a>
+            </div>
+        </div>
+        <div class="fondo">
+            <div class="proyectos" id="proyectos">
+                <h2 class="titulo">Proyectos</h2>
+                <div class="container">
+                    <div class="card">
+                        <div class="imagen-proyecto">
+                            <img src="imagenes/Reloj.png" alt="Foto del proyecto">
+                        </div>
+                        <div class="links-informacion expandido">
+                            <div class="imagenes-links">
+                                <a target="_blank" href="https://github.com/FedericoSantoro/reloj-digital"><img src="imagenes/GitHub-logo.png" alt="Repositorio GitHub"></a>
+                                <a target="_blank" href="https://reloj-digital-eight.vercel.app"><img src="imagenes/image-asset.png" alt="Link Vercel"></a>
+                            </div>
+                            <p class="informacionProyecto" id="informacionProyecto1">
+                                <!-- Proyecto realizado con HTML, CSS y Javascript que utiliza la fecha del dispositivo para mostrarla por pantalla -->
+                            </p>
+                            <button class="expandir" id="expandir1">Expandir</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imagen-proyecto">
+                            <img src="imagenes/calculadora.png" alt="Foto del proyecto">
+                        </div>
+                        <div class="links-informacion">
+                            <div class="imagenes-links">
+                                <a target="_blank" href="https://github.com/FedericoSantoro/Calculadora"><img src="imagenes/GitHub-logo.png" alt="Repositorio GitHub"></a>
+                                <a target="_blank" href="https://calculadora-puce-five.vercel.app"><img src="imagenes/image-asset.png" alt="Link Vercel"></a>
+                            </div>
+                            <p class="informacionProyecto" id="informacionProyecto2">
+                                <!-- Calculadora hecha con HTML, CSS y Javascript, realiza las operaciones basicas y admite ingreso de valores con el teclado -->
+                            </p>
+                            <button class="expandir" id="expandir2">Expandir</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imagen-proyecto">
+                            <img class="imagenCompleta" src="imagenes/paginaweb.png" alt="Foto del proyecto">
+                        </div>
+                        <div class="links-informacion">
+                            <div class="imagenes-links">
+                                <a target="_blank" href="https://github.com/FedericoSantoro/pagina-web"><img src="imagenes/GitHub-logo.png" alt="Repositorio GitHub"></a>
+                                <a target="_blank" href="https://pagina-web-seven.vercel.app"><img src="imagenes/image-asset.png" alt="Link Vercel"></a>
+                            </div>
+                            <p class="informacionProyecto" id="informacionProyecto3">
+                                <!-- Primer proyecto hecho al finalizar el curso de HTML y CSS para probar algo sencillo, no tiene Javascript implementado y el diseño es basico y sencillo -->
+                            </p>
+                            <button class="expandir" id="expandir3">Expandir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contactame" id="contactame">
+            <div class="imagen-contactame">
+                <img src="imagenes/contactame.jpg" alt="">
+            </div>
+            <div class="formulario">
+                <h2 class="titulo">Contactame</h2>
+                <form action="#proyectos" method="get" autocomplete="off">
+                    <input type="text" placeholder="Nombre" class="nombre" id="nombre">
+                    <input type="tel" placeholder="Numero de telefono" class="telefono" id="telefono">
+                    <input type="email" placeholder="Mail" class="mail" id="mail">
+                    <textarea name="consulta" class="consulta" placeholder="Consulta" id="consulta" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Enviar" class="boton" id="botonContacto">
+                </form>
+            </div>
+        </div>
     </main>
 
     <footer>
-
+        <h2 class="titulo">Redes Sociales</h2>
+        <div class="redes">
+            <a target="_blank" href="https://www.linkedin.com/in/federico-gabriel-santoro/" class="logoRed" id="logoLinkedin">
+                <img src="imagenes/logoLinkedin.png" alt="Logo Linkedin">
+            </a>
+            <a target="_blank" href="https://github.com/FedericoSantoro" class="logoRed" id="logoGithub">
+                <img src="imagenes/GitHub-logo.png" alt="Logo GitHub">
+            </a>
+            <a target="_blank" href="https://www.instagram.com/fedee_santoro/" class="logoRed" id="logoInstagram">
+                <img src="imagenes/logoInstagram.webp" alt="Logo Instagram">
+            </a>
+        </div>
     </footer>
+
+    <script src="formulario.js"></script>
+    <script src="cards.js"></script>
 
 </body>
 </html>

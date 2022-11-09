@@ -7,7 +7,10 @@ body {
     background: #0B2348;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
 }
+
+/* **************HEADER****************** */
 
 header {
     display: flex;
@@ -19,7 +22,7 @@ header {
 }
 
 .navbar {
-    width: 20%;
+    width: 30%;
     /* background-color: lightcoral; */
 }
 
@@ -79,39 +82,456 @@ header {
     width: 80%;
     height: 5px;
     top: 80%;
+    left: 10%;
     border-radius: 10px;
     background-color: #2468c7;
     clip-path: circle(0% at 50% 50%);
     transition: all 1s ease-in-out 0s;
 }
 
-.navbar ul li a:hover::after {
+.navbar ul li:hover a::after {
     clip-path: circle(20px at 50% 50%);
     transition: all 0.5s ease-in-out ;
 } 
 
-/* .navbar ul li::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    height: 100%;
-    background-color: rgb(62, 146, 214);
-    clip-path: circle(0% at 50% 50%);
-    width: 100%;
-    z-index: -1;
-    transition: all 1s ease-in-out 0s;
+/* **************MAIN****************** */
+
+main {
+    margin: 5% 0%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.navbar ul li:hover::before{
-    position: absolute;
-    clip-path: circle(60% at 50% 50%);
-    transition: all 0.5s ease-in-out ;
-}
-
-.navbar ul li a:hover {
+main .info {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
     color: white;
-    transition: all 0.5s ease-in-out ;
-    z-index: 1;
+    height: 450px;
 }
 
-*/
+main .info img {
+    height: 100%;
+    width: auto;
+    border: 5px solid aqua;
+}
+
+main .info .descripcion {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+main .info .descripcion h2 {
+    font-size: 50px;
+    position: relative;
+}
+
+main .info .descripcion h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: aqua;
+    width: 80%;
+    height: 5px;
+    left: 10%;
+    clip-path: circle(80% at 50% 50%);
+}
+
+main .info .descripcion p {
+    margin: 2%;
+    font-size: 1.5rem;
+}
+
+main .info .descripcion a {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 20%;
+}
+
+main .info .descripcion a .descarga-cv {
+    padding: 10px 20px;
+    background-color: aqua;
+    border: none;
+    border-radius: 20px;
+    /* margin-top: 10px; */
+    cursor: pointer;
+    box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
+}
+
+main .info .descripcion a:hover .descarga-cv {
+    background-color: white;
+    box-shadow: none;
+}
+
+main .fondo {
+    margin: 5% 0%;
+    padding: 5% 0%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(imagenes/shutterstock_148972376.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+}
+
+main .proyectos {
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+main .proyectos h2 {
+    align-self:flex-start;
+    color: white;
+    font-size: 50px;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+main .proyectos h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: aqua;
+    height: 5px;
+    width: 80%;
+    left: 10%;
+    clip-path: circle(80% at 50% 50%);
+}
+
+main .proyectos .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+}
+
+main .proyectos .container .card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #224d8a;
+    width: 25%;
+}
+
+main .proyectos .container .card .imagen-proyecto {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .proyectos .container .card .imagen-proyecto img {
+    width: auto;
+    height: 400px;
+}
+
+main .proyectos .container .card .imagen-proyecto .imagenCompleta {
+    width: 100%;
+    height: 250px;
+}
+
+main .proyectos .container .card .links-informacion {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 3%;
+}
+
+main .proyectos .container .card .expandido {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 3%;
+}
+
+main .proyectos .container .card .links-informacion p {
+    font-size: 1.5rem;
+    color: white;
+    padding: 5%;
+}
+
+main .proyectos .container .card .links-informacion .imagenes-links {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% 0%;
+}
+
+main .proyectos .container .card .links-informacion .imagenes-links img {
+    height: 50px;
+    width: auto;
+}
+
+main .proyectos .container .card .links-informacion button {
+    padding: 10px 20px;
+    background-color: aqua;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
+}
+
+main .proyectos .container .card .links-informacion button:hover {
+    background-color: white;
+    box-shadow: none;
+}
+
+main .contactame {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 500px;
+}
+
+main .contactame .imagen-contactame {
+    height: 500px;
+    width: 45%;
+    position: relative;
+    overflow: hidden;
+}
+
+main .contactame .imagen-contactame img {
+    height: 500px;
+    width: auto;
+    position: absolute;
+    left: -40%;
+}
+
+main .contactame .formulario {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-flow: column nowrap;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+main .contactame .formulario h2 {
+    color: white;
+    font-size: 50px;
+    position: relative;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+main .contactame .formulario h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: aqua;
+    height: 5px;
+    width: 80%;
+    left: 10%;
+    clip-path: circle(80% at 50% 50%);
+}
+
+main .contactame .formulario form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+main .contactame .formulario form input {
+    background: #0B2348;
+    height: 12%;
+    font-size: 150%;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    width: 100%;
+}
+
+main .contactame .formulario form input:focus {
+    outline: none;
+}
+
+main .contactame .formulario form .consulta {
+    background: #0B2348;
+    max-height: 21%;
+    max-width: 96%;
+    min-height: 21%;
+    min-width: 96%;
+    font-size: 150%;
+    border: 2px solid white;
+    color: white;
+    width: 96%;
+    padding: 2%;
+}
+
+main .contactame .formulario form .consulta:focus {
+    outline: none;
+}
+
+main .contactame .formulario form .boton {
+    padding: 10px 20px;
+    background-color: aqua;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
+    color: black;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .contactame .formulario form .boton:hover {
+    background-color: white;
+    box-shadow: none;
+}
+
+main .contactame .formulario form .errorDato {
+    border: 2px solid red;
+    z-index: 9999;
+}
+
+/* **************FOOTER****************** */
+
+footer {
+    align-self: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 250px;
+}
+
+footer h2 {
+    color: white;
+    font-size: 50px;
+    position: relative;
+}
+
+footer h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: aqua;
+    height: 5px;
+    width: 80%;
+    left: 10%;
+    clip-path: circle(80% at 50% 50%);
+}
+
+footer .redes {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+footer img {
+    height: 50px;
+    width: auto;
+}
+
+/* **************MEDIA QUERIES**************** */
+
+@media screen and (min-width: 2560px) {
+    body {
+        font-size: 30px;
+    }
+
+    main .info {
+        height: 600px;
+    }
+
+    main .info .descripcion p {
+        margin: 2%;
+        font-size: 2rem;
+    }
+
+    main .info .descripcion a .descarga-cv {
+        font-size: 30px;
+    }
+
+    main .proyectos .container .card .links-informacion button {
+        /* height: 50px; */
+        /* width: 50; */
+        font-size: 30px;
+    }
+
+    main .proyectos .container .card .links-informacion p {
+        font-size: 30px;
+    }
+
+    main .proyectos .container .card .links-informacion .imagenes-links img {
+        height: 80px;
+        width: auto;
+    }
+
+    main .contactame .imagen-contactame {
+        width: 45%;
+        height: 100%;
+    }
+
+    main .contactame .imagen-contactame img {
+        width: auto;
+        height: 900px;
+        left: -50%;
+    }
+
+    main .contactame {
+        height: 900px;
+        width: 80%;
+    }
+
+    footer img {
+        height: 80px;
+        width: auto;
+    }
+
+    main .contactame .formulario .titulo, main .proyectos .titulo, main .info .descripcion .titulo {
+        font-size: 80px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    main .info {
+        height: 800px;
+        width: 90%;
+    }
+
+    main .info img {
+        height: 50%;
+        width: auto;
+    }
+    
+}
