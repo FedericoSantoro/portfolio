@@ -3,6 +3,10 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@0;1&family=Italianno&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 .italiano::before, .italiano::after {
   font-family: "Italianno", cursive;
 }
@@ -27,7 +31,6 @@ code {
 
 .tituloAnimado {
   cursor: default;
-  height: 150px;
 }
 
 .tituloAnimado:hover {
@@ -37,11 +40,11 @@ code {
 }
 
 @keyframes bounce {
-  50% {
-    top: -15px;
-  }
   0%,
   100% {
-    top: 0px;
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(0.5);
   }
 }

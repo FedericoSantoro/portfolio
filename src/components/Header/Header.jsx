@@ -8,9 +8,9 @@ function Header() {
         </div>
         <nav className='h-1/2 flex flex-col justify-center content-center mt-24'>
             <ul className='text-xl text-center h-full'>
-                <li className='h-14'><span className="bg-lineaNavbar h-px w-full block mb-3"></span><a className='hover:text-celeste transition ease delay-75' href="">Sobre mí</a></li>
-                <li className='h-14'><span className="bg-lineaNavbar h-px w-full block mb-3"></span><a className='hover:text-celeste transition ease delay-75' href="">Proyectos</a></li>
-                <li className='h-14'><span className="bg-lineaNavbar h-px w-full block mb-3"></span><a className='hover:text-celeste transition ease delay-75' href="">Contacto</a><span className="bg-lineaNavbar h-px w-full block mt-3"></span></li>
+                <li className='h-14'><span className="bg-lineaNavbar h-px w-full block mb-3"></span><a className='hover:text-celeste transition ease delay-75' href="#sobreMi">Sobre mí</a></li>
+                <li className='h-14'><span className="bg-lineaNavbar h-px w-full block mb-3"></span><a className='hover:text-celeste transition ease delay-75' href="#proyectos">Proyectos</a></li>
+                <li className='h-14'><span className="bg-lineaNavbar h-px w-full block mb-3"></span><a className='hover:text-celeste transition ease delay-75' href="#contacto">Contacto</a><span className="bg-lineaNavbar h-px w-full block mt-3"></span></li>
             </ul>
         </nav>
         <div className='flex flex-row justify-evenly'>
