@@ -10,9 +10,11 @@ module.exports = {
         'cuerpo' : 'rgba(40, 40, 40, 1)',
         'lineaNavbar' : 'rgba(50, 50, 50, 1)',
         'celeste' : 'rgba(8, 253, 216, 1)',
+        'celesteClaro' : 'rgba(107, 255, 233, 1)',
         'oculto' : 'rgba(72, 72, 72, 1)',
         'textoGris' : 'rgba(124, 124, 124, 1)',
         'textoAtras' : 'rgba(56, 56, 56, 1)',
+        'blurGris' : 'rgba(0, 0, 0, 0.5)',
       },
       height: {
         '0.1': '1px',
