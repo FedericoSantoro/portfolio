@@ -48,3 +48,33 @@ code {
     transform: scale(0.5);
   }
 }
+
+.imagenDescripcion:hover .descripcion {
+  opacity: 100;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.imagenDescripcion .descripcion {
+  /* display: none; */
+  opacity: 0;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.imagenDescripcion .descripcionTecnologias {
+  bottom: 0;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.imagenDescripcion:hover .descripcionTecnologias {
+  bottom: -4rem;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.tagcloud--item {
+  color: rgba(8, 253, 216, 1);
+  font-size: 35px;
+}
+
+.tagcloud {
+  width: 100%!important;
+}

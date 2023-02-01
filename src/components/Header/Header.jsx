@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className='bg-headerColor text-white h-screen top-0 sticky w-1/12 flex flex-col text-center'>
+    <header className='bg-headerColor text-white h-screen top-0 sticky w-1/12 flex flex-col text-center z-50'>
         <div className='text-8xl h-1/4 flex flex-col justify-center content-center titulo'>
             FS
         </div>
@@ -14,8 +14,8 @@ function Header() {
             </ul>
         </nav>
         <div className='flex flex-row justify-evenly'>
-            <a target="_blank" href="https://github.com/FedericoSantoro"><i class="fa-brands fa-github text-3xl"></i></a>
-            <a target="_blank" href="https://www.linkedin.com/in/federico-gabriel-santoro/"><i class="fa-brands fa-linkedin text-3xl"></i></a>
+            <a target="_blank" href="https://github.com/FedericoSantoro"><i className="fa-brands fa-github text-3xl"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/federico-gabriel-santoro/"><i className="fa-brands fa-linkedin text-3xl"></i></a>
         </div>
     </header>
   )
