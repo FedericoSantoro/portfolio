@@ -19,8 +19,8 @@ function Contact() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
     try {
+      e.preventDefault();
       console.log(data);
       const response = await fetch(
         `https://portfolio-backend-taupe-iota.vercel.app/sendMail`,
