@@ -93,7 +93,7 @@ const Canvas = (props) => {
 
   return (
     <canvas
-      className="absolute top-0 -left-[11rem] z-10 overflow-hidden"
+      className="absolute top-0 -left-[10.6rem] z-10 overflow-hidden"
       id="canvas1"
       ref={canvasRef}
     ></canvas>
