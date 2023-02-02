@@ -27,7 +27,7 @@ function Header() {
   window.addEventListener("scroll", colorNavbar);
 
   return (
-    <div className="bg-headerColor text-white h-[100vh] top-0 sticky w-40 flex flex-col text-center z-30">
+    <div className="bg-headerColor text-white h-[100vh] top-0 sticky w-40 flex flex-col text-center z-40">
       <header className="h-3/4">
         <div className="text-8xl h-1/4 flex flex-col justify-center content-center titulo">
           FS

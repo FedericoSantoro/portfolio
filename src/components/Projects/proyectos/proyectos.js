@@ -7,13 +7,19 @@ let projects = [
     tecnologias: "HTML, CSS, JS y consumiendo la API FakeStore",
     link: "https://morning-star.vercel.app",
   },
-  
   {
     imagen: "https://parentesis.com/imagesPosts/Pokemon_favorito.jpg",
     title: "Pokemon Finder",
     desc: "¡Busca a tu pokemon favorito!",
     tecnologias: "HTML, CSS, JS y consumiendo la API pokemon",
     link: "https://pokedex-six-fawn.vercel.app",
+  },
+  {
+    imagen: "https://www.lavanguardia.com/files/article_gallery_microformat/uploads/2018/04/26/5fa438bd9078b.jpeg",
+    title: "NightOut",
+    desc: "Encontra gente para salir en cualquier momento",
+    tecnologias: "HTML, Tailwind, JS, React, Node.js y Express",
+    link: "https://nightout.vercel.app/",
   },
   {
     imagen: "https://i.blogs.es/362ab0/calc/1366_2000.jpg",
