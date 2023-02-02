@@ -3,10 +3,10 @@ import imagenContacto from "../../assets/imagenContacto.png";
 
 function Contact() {
   const [data, setData] = useState({
-    name: "",
-    mail: "",
-    subject: "",
-    message: "",
+    name: "Fernanda",
+    mail: "josefina@gmail.com",
+    subject: "Trabajo",
+    message: "Hola como estas?",
   });
 
   const handleChange = (e) => {
@@ -23,16 +23,16 @@ function Contact() {
     try {
       e.preventDefault();
       console.log(data);
-      const response = await fetch(
-        `https://portfolio-backend-taupe-iota.vercel.app/sendMail`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      console.log(JSON.stringify(data));
+      const response = await fetch(`http://localhost:3000/sendMail`, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      console.log("Response: " + JSON.stringify(response));
       if (response == 204) {
         console.log("Mail enviado correctamente");
         e.reset();
