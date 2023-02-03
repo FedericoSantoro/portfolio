@@ -26,16 +26,38 @@ function Header() {
 
   window.addEventListener("scroll", colorNavbar);
 
+  const [mostrarNavbar, setMostrarNavbar] = useState(false);
+
+  const botonNavbar = () => {
+    if (mostrarNavbar) {
+      setMostrarNavbar(false);
+    } else {
+      setMostrarNavbar(true);
+    }
+  };
+
   return (
-    <div className="bg-headerColor text-white h-[100vh] top-0 sticky w-40 flex flex-col text-center z-40">
-      <header className="h-3/4">
-        <div className="text-8xl h-1/4 flex flex-col justify-center content-center titulo">
-          FS
+    <div className="bg-headerColor text-white md:h-[100vh] md:top-0 s:sticky md:w-40 flex md:flex-col text-center z-40 s:w-[100%] s:h-16 s:justify-center s:content-center s:top-0">
+      <header className="h-3/4 w-full s:my-auto">
+        <div className="text-8xl md:h-1/4 flex md:flex-col md:justify-center md:content-center titulo s:text-5xl s:flex-row s:justify-between s:content-center s:h-full s:w-[95%] md:text-7xl md:w-full">
+          <h2 className="s:ml-4 md:ml-0 md:text-center">FS</h2>
+          <button
+            className="text-2xl s:h-full s:text-center md:hidden"
+            onClick={botonNavbar}
+          >
+            <i className="fa-solid fa-bars"></i>
+          </button>
         </div>
-        <nav className="h-1/2 flex flex-col justify-center content-center mt-24">
+        <nav
+          className={
+            mostrarNavbar
+              ? "md:h-1/2 flex flex-col justify-center content-center mt-24 s:mt-0 s:pt-4 s:bg-headerColor s:h-auto"
+              : "md:h-1/2 justify-center content-center mt-24 hidden s:mt-0 s:pt-4 s:bg-headerColor s:h-auto md:block"
+          }
+        >
           <ul className="text-xl text-center h-full">
-            <li className="h-14">
-              <span className="bg-lineaNavbar h-px w-full block mb-3"></span>
+            <li className="md:h-14 s:h-auto">
+              <span className="bg-lineaNavbar h-px w-full md:block mb-3 s:hidden"></span>
               <a
                 className={
                   seccion === 1
@@ -48,8 +70,14 @@ function Header() {
                 Sobre mí
               </a>
             </li>
-            <li className="h-14">
-              <span className="bg-lineaNavbar h-px w-full block mb-3"></span>
+            <li className="md:h-14 s:h-auto">
+              <span
+                className={
+                  seccion === 1
+                    ? "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:bg-celeste"
+                    : "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:h-0 md:h-px"
+                }
+              ></span>
               <a
                 className={
                   seccion === 2
@@ -62,8 +90,14 @@ function Header() {
                 Proyectos
               </a>
             </li>
-            <li className="h-14">
-              <span className="bg-lineaNavbar h-px w-full block mb-3"></span>
+            <li className="md:h-14 s:h-auto">
+              <span
+                className={
+                  seccion === 2
+                  ? "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:bg-celeste"
+                  : "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:h-0 md:h-px"
+                }
+              ></span>
               <a
                 className={
                   seccion === 3
@@ -75,11 +109,17 @@ function Header() {
               >
                 Contacto
               </a>
-              <span className="bg-lineaNavbar h-px w-full block mt-3"></span>
+              <span
+                className={
+                  seccion === 3
+                  ? "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:bg-celeste md:mt-3"
+                  : "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:h-0 md:h-px md:mt-3"
+                }
+              ></span>
             </li>
           </ul>
         </nav>
-        <div className="flex flex-row justify-evenly">
+        <div className="flex flex-row justify-evenly s:hidden lg:flex">
           <a
             target="_blank"
             href="https://github.com/FedericoSantoro"

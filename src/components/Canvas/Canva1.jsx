@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 const Canvas = (props) => {
   const canvasRef = useRef(null);
+  
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
@@ -93,7 +94,7 @@ const Canvas = (props) => {
 
   return (
     <canvas
-      className="absolute top-0 -left-[10.6rem] z-10 overflow-hidden"
+      className="absolute top-0 -left-[10.6rem] z-10 overflow-hidden s:hidden lg:block"
       id="canvas1"
       ref={canvasRef}
     ></canvas>

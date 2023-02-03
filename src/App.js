@@ -9,9 +9,9 @@ import Aos from "aos";
 function App() {
   Aos.init();
   return (
-    <div className="flex flex-row bg-cuerpo">
+    <div className="flex md:flex-row bg-cuerpo s:flex s:flex-col s:w-[100%] relative">
       <Header />
-      <main className="flex flex-col w-11/12 ">
+      <main className="flex flex-col md:w-11/12 s:w-[100%] overflow-hidden">
         <Inicio />
         <About />
         <Projects />

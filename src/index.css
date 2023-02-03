@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@0;1&family=Italianno&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@0;1&family=Italianno&family=Solitreo&display=swap');
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -71,29 +71,18 @@ code {
 }
 
 .tituloAnimado:hover {
-  animation: bounce 1s;
   color: rgba(8, 253, 216, 1);
-  transition: color 0.2s ease-in-out 0s;
+  transition: color 0s ease-in-out 0s;
 }
 
-@keyframes bounce {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.5);
-  }
-}
-
-.imagenDescripcion .contenedorImagen .imagen{
+.imagenDescripcion .contenedorImagen .imagen {
   filter: blur(0px);
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   transition: all 0.5s ease-in-out 0s;
 }
 
-.imagenDescripcion:hover .contenedorImagen .imagen{
+.imagenDescripcion:hover .contenedorImagen .imagen {
   filter: blur(4px);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -104,7 +93,6 @@ code {
   opacity: 100;
   transition: all 0.5s ease-in-out 0s;
 }
-
 
 .imagenDescripcion .descripcion {
   /* display: none; */
@@ -161,4 +149,14 @@ code {
 
 .animacion1:after {
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.customTitle {
+  font-family: 'Solitreo', cursive;
+}
+
+@media (max-width: 768px) {
+  .tagcloud--item {
+    font-size: 20px;
+  }
 }
