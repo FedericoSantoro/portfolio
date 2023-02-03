@@ -65,7 +65,10 @@ function Header() {
                     : "hover:text-celeste transition ease delay-75"
                 }
                 href="#sobreMi"
-                onClick={() => setSeccion(1)}
+                onClick={() => {
+                  setSeccion(1);
+                  botonNavbar();
+                }}
               >
                 Sobre mí
               </a>
@@ -85,7 +88,10 @@ function Header() {
                     : "hover:text-celeste transition ease delay-75"
                 }
                 href="#proyectos"
-                onClick={() => setSeccion(2)}
+                onClick={() => {
+                  setSeccion(2);
+                  botonNavbar();
+                }}
               >
                 Proyectos
               </a>
@@ -94,8 +100,8 @@ function Header() {
               <span
                 className={
                   seccion === 2
-                  ? "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:bg-celeste"
-                  : "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:h-0 md:h-px"
+                    ? "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:bg-celeste"
+                    : "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:h-0 md:h-px"
                 }
               ></span>
               <a
@@ -105,15 +111,18 @@ function Header() {
                     : "hover:text-celeste transition ease delay-75"
                 }
                 href="#contacto"
-                onClick={() => setSeccion(3)}
+                onClick={() => {
+                  setSeccion(3);
+                  botonNavbar();
+                }}
               >
                 Contacto
               </a>
               <span
                 className={
                   seccion === 3
-                  ? "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:bg-celeste md:mt-3"
-                  : "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:h-0 md:h-px md:mt-3"
+                    ? "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:bg-celeste md:mt-3"
+                    : "md:bg-lineaNavbar h-px md:w-full block md:mb-3 s:mb-5 s:w-1/4 s:mx-auto s:h-0 md:h-px md:mt-3"
                 }
               ></span>
             </li>

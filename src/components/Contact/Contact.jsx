@@ -130,7 +130,7 @@ function Contact() {
 
   return (
     <div
-      className="flex flex-row content-center w-full relative pt-0 mt-16 min-h-screen"
+      className="flex flex-row content-center w-full relative pt-0 mt-16 min-h-screen s:pt-20"
       id="contacto"
     >
       <h2 className="absolute text-textoAtras text-[400px] right-0 pointer-events-none z-10 s:-rotate-90 s:text-[115px] s:-right-32 s:top-28 md:text-[150px] md:-right-28 lg:rotate-0 lg:text-[200px] lg:top-0 lg:right-0">

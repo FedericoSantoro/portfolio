@@ -5,7 +5,7 @@ import proyectos from "./proyectos/proyectos";
 function Projects() {
   return (
     <div
-      className="flex flex-col content-center w-full relative min-h-screen mt-1 s:mt-10"
+      className="flex flex-col content-center w-full relative min-h-screen mt-1 s:mt-10 s:pt-20"
       id="proyectos"
     >
       <h2 className="absolute text-textoAtras text-[400px] lg:right-0 pointer-events-none s:-rotate-90 s:text-[115px] s:-right-32 s:top-28 md:text-[150px] md:-right-28 md:top-36 lg:text-[200px] lg:rotate-0 lg:top-0">

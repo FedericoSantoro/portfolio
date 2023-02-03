@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        '3xl': '2560px',
+        //'3xl': '2560px',
         //'3xl': {'max': '2560px'},
         // => @media (max-width: 1535px) { ... }
 
