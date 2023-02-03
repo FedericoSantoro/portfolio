@@ -6,7 +6,6 @@ function Header() {
 
   const colorNavbar = () => {
     const { scrollTop } = document.documentElement;
-    console.log("Scroll: " + scrollTop);
     if (scrollTop > window.innerHeight && scrollTop <= window.innerHeight * 2) {
       setSeccion(1);
     } else if (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import imagenContacto from "../../assets/imagenContacto.png";
+import axios from 'axios';
 
 function Contact() {
   const [alert, setAlert] = useState([
@@ -47,10 +48,10 @@ function Contact() {
     },
   ]);
   const [data, setData] = useState({
-    name: "",
-    mail: "",
-    subject: "",
-    message: "",
+    name : "Fernanda Lorenza",
+    mail : "josefinarita@gmail.com",
+    subject : "Trabajos grupales",
+    message : "Holan como estas?"
   });
 
   const handleChange = (e) => {
@@ -72,18 +73,11 @@ function Contact() {
         if (emailRegex.test(data.mail)) {
           if (data.subject.length > 2) {
             if (data.message.length > 10) {
-              const response = await fetch(`http://localhost:3000/sendMail`, {
-                method: "POST",
-                mode: "no-cors",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-              });
-              console.log("Response: " + JSON.stringify(response));
-              if (response == 204) {
+              const mensaje = JSON.stringify(data)
+              const response = await axios.post(`https://portfolio-backend-taupe-iota.vercel.app/sendMail`, { name: data.name, mail: data.mail, subject: data.subject, message: data.message });
+              if (response.status == 204) {
                 console.log("Mail enviado correctamente");
-                e.reset();
+                document.getElementById('formulario').reset();
                 setData({
                   name: "",
                   mail: "",
@@ -112,7 +106,6 @@ function Contact() {
   };
 
   const controlarAlerta = (name) => {
-    console.log("Antes: " + JSON.stringify(alert));
     const newState = alert.map((alerta) => {
       if (alerta.name === name) {
         if (alerta.show) {
@@ -123,9 +116,7 @@ function Contact() {
       }
       return alerta;
     });
-    console.log("Medio: " + JSON.stringify(newState));
     setAlert(newState);
-    console.log("Despues: " + JSON.stringify(newState));
   };
 
   return (
@@ -160,6 +151,7 @@ function Contact() {
             <form
               onSubmit={handleSubmit}
               action=""
+              id="formulario"
               className="flex flex-col before:content-['<form>'] lg:before:text-3xl before:text-oculto after:content-['</form>'] lg:after:text-3xl after:text-oculto after:my-3 before:my-3 after:-ml-5 before:-ml-5 italiano mb-0 z-30 text-white s:after:text-xl s:before:text-xl s:text-base s:after:ml-9 s:before:ml-9 s:w-[95%] s:mx-auto md:before:text-2xl md:after:text-2xl lg:before:-ml-5 lg:after:-ml-5 lg:ml-[4rem] lg:w-[85%]"
             >
               <div className="flex lg:flex-row justify-evenly s:flex-col">
@@ -271,7 +263,7 @@ function Contact() {
               key={i}
               className="z-40 bg-blurGris fixed top-0 left-0 h-screen w-screen flex flex-col justify-center content-center"
             >
-              <div className="bg-textoAtras text-white flex flex-col justify-evenly content-center z-50 w-1/3 mx-auto h-1/3 s:w-[95%] s:h-auto s:p-6 md:w-auto">
+              <div className="bg-textoAtras text-white flex flex-col justify-evenly content-center z-50 w-1/3 mx-auto h-1/3 s:w-[95%] s:h-auto s:p-6 md:w-1/2 lg:w-[45%] xl:w-[30%]">
                 <h2 className="font-bold text-4xl text-center s:text-2xl md:text-3xl">
                   {alerta.name === "MensajeEnviado"
                     ? "¡Mail enviado!"
