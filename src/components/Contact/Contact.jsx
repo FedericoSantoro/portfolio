@@ -73,7 +73,7 @@ function Contact() {
         if (emailRegex.test(data.mail)) {
           if (data.subject.length > 2) {
             if (data.message.length > 10) {
-              const response = await axios.post(`https://portfolio-backend-taupe-iota.vercel.app/sendMail`, { name: data.name, mail: data.mail, subject: data.subject, message: data.message });
+              const response = await axios.post(`https://portfolio-backend-federico-santoro.vercel.app/sendMail`, { name: data.name, mail: data.mail, subject: data.subject, message: data.message });
               if (response.status == 204) {
                 console.log("Mail enviado correctamente");
                 document.getElementById('formulario').reset();
