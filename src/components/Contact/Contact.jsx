@@ -101,6 +101,7 @@ function Contact() {
       }
     } catch (error) {
       console.log(error);
+      controlarAlerta("ErrorMensaje");
     }
   };
 
