@@ -22,6 +22,13 @@ let projects = [
     link: "https://nightout.vercel.app/",
   },
   {
+    imagen: "https://www.65ymas.com/uploads/s1/19/86/23/donde-y-como-se-pueden-donar-libros-que-ya-no-queremos.jpeg",
+    title: "GiveAway",
+    desc: "¿Tenés un libro que no te interesa? ¡Ayuda a otra persona donandolo con GiveAway!",
+    tecnologias: "React Native, Node.js, Express, Mongoose, MongoDB",
+    link: "",
+  },
+  {
     imagen: "https://i.blogs.es/362ab0/calc/1366_2000.jpg",
     title: "Calculadora",
     desc: "¿Necesitas hacer una cuenta? Llegaste al lugar correcto",
