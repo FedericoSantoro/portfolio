@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import imagenContacto from "../../assets/imagenContacto.png";
-import axios from 'axios';
+import axios from "axios";
+import { Ring } from "@uiball/loaders";
 
 function Contact() {
   const [alert, setAlert] = useState([
@@ -46,12 +47,19 @@ function Contact() {
       show: false,
       button: "Volver",
     },
+    {
+      name: "EnviandoMensaje",
+      title: "El mensaje esta siendo enviado",
+      problem: "Aguarde por favor",
+      show: false,
+      button: "",
+    },
   ]);
   const [data, setData] = useState({
-    name : "Fernanda Lorenza",
-    mail : "josefinarita@gmail.com",
-    subject : "Trabajos grupales",
-    message : "Holan como estas?"
+    name: "Fernanda Lorenza",
+    mail: "josefinarita@gmail.com",
+    subject: "Trabajos grupales",
+    message: "Holan como estas?",
   });
 
   const handleChange = (e) => {
@@ -73,10 +81,20 @@ function Contact() {
         if (emailRegex.test(data.mail)) {
           if (data.subject.length > 2) {
             if (data.message.length > 10) {
-              const response = await axios.post(`https://portfolio-backend-federico-santoro.vercel.app/sendMail`, { name: data.name, mail: data.mail, subject: data.subject, message: data.message });
+              controlarAlerta("EnviandoMensaje");
+              const response = await axios.post(
+                `https://portfolio-backend-federico-santoro.vercel.app/sendMail`,
+                {
+                  name: data.name,
+                  mail: data.mail,
+                  subject: data.subject,
+                  message: data.message,
+                }
+              );
+              controlarAlerta("EnviandoMensaje");
               if (response.status == 204) {
                 console.log("Mail enviado correctamente");
-                document.getElementById('formulario').reset();
+                document.getElementById("formulario").reset();
                 setData({
                   name: "",
                   mail: "",
@@ -267,16 +285,28 @@ function Contact() {
                 <h2 className="font-bold text-4xl text-center s:text-2xl md:text-3xl">
                   {alerta.name === "MensajeEnviado"
                     ? "¡Mail enviado!"
+                    : alerta.name === "EnviandoMensaje"
+                    ? "¡Gracias por la consulta!"
                     : "¡Parece que hubo un problema!"}
                 </h2>
-                <h3 className="text-2xl text-center s:text-lg s:my-5 md:text-xl">{alerta.title}</h3>
-                <p className="text-lg text-center s:text-sm s:mb-5 md:text-base">{alerta.problem}</p>
-                <button
-                  onClick={() => controlarAlerta(alerta.name)}
-                  className="block text-2xl border border-celeste p-3 w-40 text-center mt-3 after:content-[''] after:block after:bg-celeste relative after:absolute after:w-1 after:h-1 after:right-0 after:bottom-0 animacion1 mx-auto s:text-lg s:w-1/2 md:text-xl"
-                >
-                  {alerta.button}
-                </button>
+                <h3 className="text-2xl text-center s:text-lg s:my-5 md:text-xl">
+                  {alerta.title}
+                </h3>
+                <p className="text-lg text-center s:text-sm s:mb-5 md:text-base">
+                  {alerta.problem}
+                </p>
+                {alerta.name === "EnviandoMensaje" ? (
+                  <div className="mx-auto">
+                    <Ring size={60} lineWeight={5} speed={2} color="#08FDD8"/>  
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => controlarAlerta(alerta.name)}
+                    className="block text-2xl border border-celeste p-3 w-40 text-center mt-3 after:content-[''] after:block after:bg-celeste relative after:absolute after:w-1 after:h-1 after:right-0 after:bottom-0 animacion1 mx-auto s:text-lg s:w-1/2 md:text-xl"
+                  >
+                    {alerta.button}
+                  </button>
+                )}
               </div>
             </div>
           );
