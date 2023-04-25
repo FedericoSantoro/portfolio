@@ -46,6 +46,7 @@ function About() {
             "Node.js",
             "Express",
             "Tailwind",
+            "MongoDB",
           ]}
         </TagCloud>
       </div>
@@ -68,6 +69,7 @@ function About() {
             "Nodejs",
             "Express",
             "Tailwind",
+            "MongoDB",
           ]}
         </TagCloud>
       </div>
@@ -90,6 +92,7 @@ function About() {
             "Node.js",
             "Express",
             "Tailwind",
+            "MongoDB",
           ]}
         </TagCloud>
       </div>
