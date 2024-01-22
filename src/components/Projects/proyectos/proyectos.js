@@ -8,7 +8,7 @@ let projects = [
     link: "https://morning-star.vercel.app",
   },
   {
-    imagen: "https://parentesis.com/imagesPosts/Pokemon_favorito.jpg",
+    imagen: "https://static.vecteezy.com/system/resources/thumbnails/024/986/992/small/cute-yellow-mouse-with-ball-scene-background-free-vector.jpg",
     title: "Pokemon Finder",
     desc: "¡Busca a tu pokemon favorito!",
     tecnologias: "HTML, CSS, JS y consumiendo la API pokemon",
