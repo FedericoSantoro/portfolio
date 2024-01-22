@@ -31,13 +31,14 @@ function Inicio() {
           <span className="tituloAnimado">,&nbsp;</span>
           <br />
           <span className="tituloAnimado">F</span>
-          <span className="tituloAnimado">r</span>
-          <span className="tituloAnimado">o</span>
-          <span className="tituloAnimado">n</span>
-          <span className="tituloAnimado">t&nbsp;</span>
-          <span className="tituloAnimado">E</span>
-          <span className="tituloAnimado">n</span>
-          <span className="tituloAnimado">d&nbsp;</span>
+          <span className="tituloAnimado">u</span>
+          <span className="tituloAnimado">l</span>
+          <span className="tituloAnimado">l&nbsp;</span>
+          <span className="tituloAnimado">S</span>
+          <span className="tituloAnimado">t</span>
+          <span className="tituloAnimado">a</span>
+          <span className="tituloAnimado">c</span>
+          <span className="tituloAnimado">k&nbsp;</span>
           <span className="tituloAnimado">D</span>
           <span className="tituloAnimado">e</span>
           <span className="tituloAnimado">v</span>
